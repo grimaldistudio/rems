@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id = "it.engineering.*"
+        versionCode="11"
+        version = "1.1.0">
+    <name>AIAS</name>
+
+    <description>
+        REMS
+    </description>
+
+    <author href="http://www.remanagementsystem.it" email="info@engisolution.it">
+        REMS
+    </author>
+	
+	<feature name="http://api.phonegap.com/1.0/device" />
+
+    <preference name="phonegap-version" value="3.5.0" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="handset" />
+    <preference name="fullscreen" value="false" />
+	<preference name="stay-in-webview" value="true" />
+	<preference name="ios-statusbarstyle" value="black-opaque" />
+	
+
+	
+	<!-- Icons -->
+ 	<icon src="icon.png" />
+ 
+    
+
+	
+</widget>
