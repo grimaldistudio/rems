@@ -5,6 +5,7 @@
         id = "it.engineering.*"
         versionCode = "10" 
         version = "1.1.0">
+    
     <name>REMS</name>
 
     <description>
