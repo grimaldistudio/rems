@@ -12,7 +12,7 @@
         REMS
     </author>
 	
-	<feature name="http://api.phonegap.com/1.0/device" />
+
 
     <preference name="phonegap-version" value="3.5.0" />
     <preference name="orientation" value="default" />
@@ -26,7 +26,10 @@
 	<!-- Icons -->
  	<icon src="icon.png" />
  
-    
+        <gap:splash src="images/splash/main.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="images/splash/main.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="images/splash/main.png" gap:platform="ios" width="768" height="1024" />
+    <gap:splash src="images/splash/main.png" gap:platform="ios" width="1024" height="768" />
 
 	
 </widget>
