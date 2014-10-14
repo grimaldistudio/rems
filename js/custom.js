@@ -9,7 +9,7 @@ function AppGeneralCtrl($scope, $http, $templateCache) {
     
     
     $scope.UnityCtrlAjax = function(filter) {
-         $http.get('http://rems.local/api/building?filter=[{"property": "site_type", "value" : "'+filter+'", "operator": "="}]').
+         $http.get('http://remanagementsystem.it/api/building?filter=[{"property": "site_type", "value" : "'+filter+'", "operator": "="}]').
             success(function(data) {
                  $scope.posts = data; // response data 
             });        
@@ -17,7 +17,7 @@ function AppGeneralCtrl($scope, $http, $templateCache) {
     
     $scope.UnityCount = function() {
    
-         $http.get('http://rems.local/api/building/categorycount').
+         $http.get('http://remanagementsystem.it/api/building/categorycount').
             success(function(data) {
                  $scope.unity = {
                     scolastico: (data.param1["edificio scolastico"]!=null) ? data.param1["edificio scolastico"] : 0,
@@ -31,7 +31,7 @@ function AppGeneralCtrl($scope, $http, $templateCache) {
     }  
     
     $scope.showUnityDetails = function(id,address,lat,long) {
-      $http({method: 'GET', url: 'http://rems.local/api/building/' + id, cache: $templateCache}).
+      $http({method: 'GET', url: 'http://remanagementsystem.it/api/building/' + id, cache: $templateCache}).
           success(function(data, status, headers, config) {
               $scope.appDetail = data;               //set view model
              // $scope.view = './Partials/detail.html'; //set to detail view
@@ -52,7 +52,7 @@ function AppGeneralCtrl($scope, $http, $templateCache) {
    
    $scope.AssemblyListViewAjax = function() {
        if($scope.myusers.status == 1) {
-         $http.get('http://rems.local/api/assemblypartecipants?filter=[{"property": "users_id", "value" : "'+$scope.myusers.userid+'", "operator": "="}]').
+         $http.get('http://remanagementsystem.it/api/assemblypartecipants?filter=[{"property": "users_id", "value" : "'+$scope.myusers.userid+'", "operator": "="}]').
             success(function(data) {
                  $scope.calls = data; // response data                  
             });        
@@ -63,7 +63,7 @@ function AppGeneralCtrl($scope, $http, $templateCache) {
     
     
      $scope.ContractListViewAjax = function() {                  
-             $http({method: 'GET', url: 'http://rems.local/api/contractinvitation', cache: $templateCache}).
+             $http({method: 'GET', url: 'http://remanagementsystem.it/api/contractinvitation', cache: $templateCache}).
                 success(function(data, status, headers, config) {
                     $scope.contracts = data;               //set view model                  
                 }).
@@ -77,7 +77,7 @@ function AppGeneralCtrl($scope, $http, $templateCache) {
             
     if ($scope.username && $scope.password) {
              
-      $http.get('http://rems.local/api/assemblypartecipants/condominium/'+$scope.username+'/'+$scope.password).
+      $http.get('http://remanagementsystem.it/api/assemblypartecipants/condominium/'+$scope.username+'/'+$scope.password).
             success(function(data) {
                 if(data.result.result == "ok") {
                                   
