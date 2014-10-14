@@ -1,1 +1,0 @@
-<div data-role="footer"><p>&copy; Klassio RSV. All Rights Reserved. <span><a class="scroll-to-top"><img src="images/top.png" width="32"/></a></span></p></div>
